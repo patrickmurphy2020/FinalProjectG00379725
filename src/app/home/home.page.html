@@ -13,11 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
- <ul>
+  <!--List the games details fdrom another url using http toggle-->
+  <ul>
    <li *ngFor="let game of games">{{game.name}}, {{game.release}}, {{game.devolper}}, {{game.genre}}, {{game.platforms}}</li>>
  </ul>>
  
-  <ul>
+ <!--The links to navigate between pages and give more details on each game-->
+ <ul>
     <li [routerLink]="['/resident-evil']" routerDirection="forward">Resident Evil Village</li>
     <li [routerLink]="['/blazing-beaks']" routerDirection="forward">Blazing Beaks</li>
     <li [routerLink]="['/the-invisible-hand']" routerDirection="forward">The Invisbile Hand</li>

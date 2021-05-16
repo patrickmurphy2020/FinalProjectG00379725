@@ -14,6 +14,7 @@ lat:any;
 long:any;
   constructor(private calendar: Calendar,private geolocation: Geolocation) {}
 
+ //use the phones callendar to see how long till release
   Calendar()
   {
     this.calendar.listCalendars().then( (data)=>{
@@ -21,6 +22,7 @@ long:any;
     })
   }
 
+  //use gps to find location
   GPS()
   {
     this.geolocation.getCurrentPosition().then((resp) => {

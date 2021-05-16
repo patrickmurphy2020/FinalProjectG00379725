@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
 
   }
   
+  //get the data about the games from the url 
   ngOnInit()
   {
     this.service.GetGameData().subscribe( (data)=>{
