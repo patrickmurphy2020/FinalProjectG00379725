@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button></ion-back-button>
+    <ion-title>Number Of Games Wanted</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="https://static.independent.co.uk/2021/03/22/17/best%20gaming%20consoles%20indybest.jpg?width=1200&auto=webp&quality=75" (dblclick)=showConsole()>
+  <label>Do you Play on concole</label>
+
+  <br>
+  <h2 [hidden]="hiddenConsole">You play on console great!</h2>
+  <br>
+  
+  <img src="https://www.rollingstone.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-25-at-8.53.18-AM.png?w=862" (dblclick)=showPc()>
+  <label>Do you play on PC</label>
+
+  <br>
+  <h2 [hidden]="hiddenPC">You play on pc great!</h2>
+  <br>
+
+  <button (click)="count()">Press me for every game you want to buy</button>
+  
+  <h2>The number of games Im intereted in is : {{numberOfGames}}</h2>
+
+  <app-list-of-consoles></app-list-of-consoles>
+</ion-content>

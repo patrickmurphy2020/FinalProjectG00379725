@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button></ion-back-button>
+    <ion-title>Interest</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>My Interst in this game is {{InterestInGame}}</ion-label>
+  <ion-list>
+    <!--Read in how interested they are in buying the invisible hand-->
+    
+    <ion-radio-group [(ngModel)]="InterestInGame">
+      <ion-list-header>
+        <ion-label>
+          Are you interetsed in this game
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Im going to buy this game</ion-label>
+        <ion-radio value="Im going to buy it"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>I might buy</ion-label>
+        <ion-radio value="I might buy it"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>I dont think I will buy it</ion-label>
+        <ion-radio value="Im unlikely to buy it"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>I dont know if I will buy it</ion-label>
+        <ion-radio value="I dont know if I will buy it"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>I am not going to buy it</ion-label>
+        <ion-radio value="Im not going to buy it"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-button (click)="saveInvisibleHand()">Save</ion-button>
+</ion-content>
