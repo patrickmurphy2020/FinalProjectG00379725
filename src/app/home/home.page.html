@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      New Games
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">New Games</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ <ul>
+   <li *ngFor="let game of games">{{game.name}}, {{game.release}}, {{game.devolper}}, {{game.genre}}, {{game.platforms}}</li>>
+ </ul>>
+ 
+  <ul>
+    <li [routerLink]="['/resident-evil']" routerDirection="forward">Resident Evil Village</li>
+    <li [routerLink]="['/blazing-beaks']" routerDirection="forward">Blazing Beaks</li>
+    <li [routerLink]="['/the-invisible-hand']" routerDirection="forward">The Invisbile Hand</li>
+    <li [routerLink]="['/hood-outlwas']" routerDirection="forward">Hood: Outlaws & Legends</li>
+    <li [routerLink]="['/monster-harvest']" routerDirection="forward">Monster Harvest</li>
+  </ul>
+
+  <label [routerLink]="['/number-of-games-wanted']" routerDirection="forward">Count how many games you want</label>
+<br>>
+<ion-button (click)="Calendar()">Calendar</ion-button>
+<br>
+<ion-button (click)="GPS()">GPS</ion-button>
+<br>
+{{lat}}, {{long}}
 </ion-content>
